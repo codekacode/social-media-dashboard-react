@@ -1,0 +1,39 @@
+.dark-mode {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1em;
+}
+.checkbox {
+  display: none;
+}
+.checkbox:checked ~ .switch:before{
+  -webkit-transform: translateX(40px);
+          transform: translateX(40px);
+}
+.switch {
+  /* border: 1px solid red; */
+  height: 40px;
+  display: block;
+  border-radius: 20px;
+  background: var(--switch);
+  width: 80px;
+  padding: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.switch::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: var(--switchSpinner);
+  border-radius: 50%;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  transition: .3s;
+  will-change: transform;
+}
